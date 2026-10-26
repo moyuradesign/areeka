@@ -15,7 +15,7 @@ This release introduces a reusable admin UI system:
 
 **Explicitly preserved:** license, installer, .env, storage, database, roles/permissions, routes, controllers, Nginx, PHP-FPM, compiled JavaScript.
 
-The **Areeka-Global-Premium-Admin-aaPanel-v1.2.8.zip** contains a checksum-verified guarded deployer (private backup and rollback; exact source-hash comparison against v1.2.7). The **Areeka-CRM-v0.0.1-Global-Premium-Admin-v1.2.8-Source.zip** contains the complete updated Laravel source.
+The original **Areeka-Global-Premium-Admin-aaPanel-v1.2.8.zip** contains a checksum-verified guarded deployer (private backup and rollback; exact source-hash comparison against v1.2.7). The **Areeka-CRM-v0.0.1-Global-Premium-Admin-v1.2.8-Source.zip** contains the complete updated Laravel source.
 
 ```sh
 sha256sum -c SHA256SUMS.txt
@@ -26,6 +26,6 @@ python3 -B scripts/deploy.py --deploy --confirm INSTALL_AREEKA_PREMIUM_ADMIN_UI_
 python3 -B scripts/deploy.py --check
 ```
 
-Do not deploy when `BLOCKED_SOURCE_DRIFT` appears. Ensure the installed.lock file exists. Test populated record menus, confirmation Cancel/Confirm, filter persistence, and pagination before customer release.
+**Important hotfix v1.2.8.1 (2026-10-26):** The original v1.2.8 ZIP erroneously checked `storage/installed.lock`, while Areeka's installer and public entrypoint use `storage/app/private/areeka-installed.lock`. Use **Areeka-Global-Premium-Admin-aaPanel-v1.2.8.1.zip**, SHA-256 `cea285aafb28efe3e408f3d00e2b367c2e900a50dabbfd46b3d8c2aec6731069`. The actual admin/UI deployment payload is unchanged; only the guarded deployment check and fixture tests are corrected. The new guard also validates the real lock's format and rejects symlinks; it does not create or modify the lock. Add `python3 -B tests/test_lock_guard.py` to the checks. Do not deploy when `BLOCKED_SOURCE_DRIFT` appears. Require the real canonical lock to exist. Test populated record menus, confirmation Cancel/Confirm, filter persistence, and pagination before customer release.
 
 **GitHub scope:** This repository is not yet a complete synchronized Laravel source. The full source ZIP is the release artifact for v1.2.8; additional source paths should only be synchronized after verifying the repository state.
