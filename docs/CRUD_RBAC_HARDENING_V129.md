@@ -1,11 +1,11 @@
 # Areeka CRM v1.2.9 — CRUD Reliability & Role Boundaries
 
 **Baseline:** Deployed v1.2.8.1. **Package:** `Areeka-CRUD-RBAC-Guard-aaPanel-v1.2.9.zip`.
-**Package SHA-256:** `4d3c6d04a1e799ad2a3f1a055d09ccbd173c5956c2722665c5bc8b2e8ff85e92`.
+**Package SHA-256:** `d202b8c3b3a7c217bafffafc66b537a22bf309bd26633cd7221ed08bed96c276`.
 
 ## Improvements
 - Module CRUD routes now distinguish `view`, `create`, `update`, and `delete` permissions instead of sharing one module grant for all actions.
-- Backwards compatibility: existing module grants remain fully functional until at least one module-specific action permission is configured for that role. With granular flags present, only checked actions work, and the base module permission remains required.
+- Backwards compatibility: existing module grants remain fully functional until granular actions are configured. A sticky restricted marker is stored on first use, preventing a role from accidentally regaining full CRUD when the last granular action is unchecked. The base module permission is always required.
 - UI hides unauthorized create/edit/delete actions; server-side controller enforcement remains authoritative.
 - Dashboard/search/calendar/financial reports and CSV export respect view permissions. CSV import respects create permissions.
 - User Manager enforces strict role hierarchy: except for super administrators, users with user-management permission can only manage and assign **strictly lower** roles. Mutations and audit events are in one DB transaction.
