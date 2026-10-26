@@ -11,4 +11,6 @@
 .auth-back-icon {display:inline-block;vertical-align:middle;flex:none;}
 @media(max-width:480px) {.auth-form-actions .button.auth-submit {width:100%;min-width:0;max-width:100%;}}
 @media(prefers-reduced-motion:reduce) {.auth-form-actions .button.auth-submit {transition:none!important;}.auth-form-actions .button.auth-submit:hover:not(:disabled),.auth-form-actions .button.auth-submit:active:not(:disabled) {transform:none!important;}}
+html[data-theme=dark] .auth-form-actions .button.auth-submit {background:linear-gradient(120deg,#6658d8 0%,#5046b0 100%);color:#fff;box-shadow:0 9px 22px rgba(0,0,0,.24);}
+html[data-theme=dark] .auth-form-actions .button.auth-submit:hover:not(:disabled) {background:linear-gradient(120deg,#5b50c7 0%,#423994 100%);box-shadow:0 13px 26px rgba(0,0,0,.31);}
 /* END AREEKA_AUTH_ACTION_BUTTONS_V125 */
