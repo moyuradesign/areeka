@@ -1,7 +1,7 @@
 # Areeka CRM v1.3.2 — Eight-digit public UID, customer table and anchored row actions
 
 Release package: `Areeka-Customer-PublicUID-Table-Menu-aaPanel-v1.3.2.zip`
-SHA-256: `16a94da8fad205839010b8feaee5e58749c7f1ad699b98125534a9b1ef28c262`
+SHA-256: `2fe2cfe573610767c4e443d5be078d4ec8599d618131fce870f793febaab6e61`
 
 Complete Laravel source: `Areeka-CRM-v0.0.1-Customer-PublicUID-v1.3.2-Source.zip`
 SHA-256: `0adf237efa28a459c052eea274a2a704f6116879f7bd7ad29e9133997c905ce4`
