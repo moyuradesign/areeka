@@ -1,0 +1,14 @@
+/* AREEKA_AUTH_ACTION_BUTTONS_V125: scoped action icon and premium button finish */
+.auth-form-actions {display:flex;align-items:center;justify-content:center;gap:12px;margin-top:9px;}
+.auth-form-actions .button.auth-submit {display:inline-flex;align-items:center;justify-content:center;gap:10px;width:auto;min-width:184px;min-height:43px;padding:10px 20px;border:1px solid transparent;border-radius:12px;white-space:nowrap;font-size:13px;font-weight:730;line-height:1.25;letter-spacing:0;background:linear-gradient(120deg,var(--accent) 0%,var(--accent-strong) 100%);color:#fff;box-shadow:0 7px 16px rgba(57,49,161,.16);transition:transform .17s ease,box-shadow .17s ease,background .17s ease,border-color .17s ease;}
+.auth-form-actions .button.auth-submit .auth-button-icon {display:block;width:17px;height:17px;flex:none;stroke:currentColor;opacity:.95;}
+.auth-form-actions .button.auth-submit:hover:not(:disabled) {transform:translateY(-1px);background:linear-gradient(120deg,var(--accent-strong) 0%,color-mix(in srgb,var(--accent-strong) 83%,#252060) 100%);box-shadow:0 11px 23px rgba(57,49,161,.23);}
+.auth-form-actions .button.auth-submit:active:not(:disabled) {transform:translateY(0) scale(.98);box-shadow:0 4px 11px rgba(57,49,161,.17);}
+.auth-form-actions .button.auth-submit:focus-visible {outline:3px solid color-mix(in srgb,var(--accent) 47%,white);outline-offset:3px;}
+.auth-form-actions .button.auth-submit:disabled {opacity:.56;filter:saturate(.6);box-shadow:none;cursor:not-allowed;}
+.auth-form-actions .button.auth-submit > span {display:inline-block;}
+.auth-alternate a:has(.auth-back-icon) {display:inline-flex;align-items:center;justify-content:center;gap:6px;}
+.auth-back-icon {display:inline-block;vertical-align:middle;flex:none;}
+@media(max-width:480px) {.auth-form-actions .button.auth-submit {width:100%;min-width:0;max-width:100%;}}
+@media(prefers-reduced-motion:reduce) {.auth-form-actions .button.auth-submit {transition:none!important;}.auth-form-actions .button.auth-submit:hover:not(:disabled),.auth-form-actions .button.auth-submit:active:not(:disabled) {transform:none!important;}}
+/* END AREEKA_AUTH_ACTION_BUTTONS_V125 */
